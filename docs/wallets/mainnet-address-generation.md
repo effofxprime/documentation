@@ -1,6 +1,6 @@
 # Mainnet Address Generation
 
-This document contains the information of account address for Vidulum Chain mainnet.
+This document contains the information of account address for Beezee Chain mainnet.
 
 ## Address prefix
 
@@ -8,7 +8,7 @@ Account address for mainnet starts with prefix `cro`. For example: `cro1y8ua5lac
 
 ## Hierarchical Deterministic Wallet (HD Wallet) Derivation Path
 
-Vidulum Chain has [registered](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) coin type `394` as defined in [BIP44 standard](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki).
+Beezee Chain has [registered](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) coin type `394` as defined in [BIP44 standard](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki).
 
 Coin Type: 394 <br />
 Derivation Path: `44'/394'/0'/0/{index}` where index starts from 0.
@@ -20,7 +20,7 @@ i.e. the first address is derived at path `44'/394'/0'/0/0` and the second one a
 ::: warning MAKE SURE YOU BACKUP YOUR MNEMONIC WORDS
 Before you use the generated mainnet addresses to receive funds on mainnet, make sure that you have backup your address's mnemonic words correctly in a safe place and the mnemonic words are correct such that it can restore to your wallet address in the future.
 
-You are the sole owner of your wallet mnemonic words and there is no way for Vidulum to restore your wallet or recover your funds if you lost the mnemonic words.
+You are the sole owner of your wallet mnemonic words and there is no way for Beezee to restore your wallet or recover your funds if you lost the mnemonic words.
 :::
 
 ::: warning GENERATE ADDRESS ONLY IN A SECURE ENVIRONMENT
@@ -36,16 +36,16 @@ There are four ways to generate the mainnet address by using:
 
 - [Release Binary (CLI)](#a-release-binary-cli);
 - [Ledger Wallet](#b-ledger-wallet);
-- [Programmatically via Vidulum Chain JavaScript Library](#c-programmatically); and
-- [Vidulum Chain Desktop Wallet (Beta version)](#d-crypto-org-chain-desktop-wallet-beta).
+- [Programmatically via Beezee Chain JavaScript Library](#c-programmatically); and
+- [Beezee Chain Desktop Wallet (Beta version)](#d-crypto-org-chain-desktop-wallet-beta).
 
 ## A. Release Binary (CLI)
 
 Supported OS: Linux, Mac OS and Windows
 
-#### Step 1. Get the Vidulum Chain binary
+#### Step 1. Get the Beezee Chain binary
 
-Download the Vidulum Chain Binary for Mainnet from [release page](https://github.com/crypto-org-chain/chain-main/releases/tag/v1.0.0) and extract the binary. Here we used Linux as an example:
+Download the Beezee Chain Binary for Mainnet from [release page](https://github.com/crypto-org-chain/chain-main/releases/tag/v1.0.0) and extract the binary. Here we used Linux as an example:
 
  ```bash
   $ curl -LOJ https://github.com/crypto-org-chain/chain-main/releases/download/v2.0.1/chain-main_2.0.1_Linux_x86_64.tar.gz
@@ -101,13 +101,13 @@ scare blur bless unfair chat gadget leaf reveal job depend daughter unveil fatal
 
 <img src="./assets/mainnet-address-generation/ledger-live-manager.png" />
 
-#### Step 1-3. Search for "Vidulum Chain" and install the application to your Ledger.
+#### Step 1-3. Search for "Beezee Chain" and install the application to your Ledger.
 
 <img src="./assets/ledger_desktop_wallet/s1-5.png" />
 
 #### Step 1-4. Confirm the installation
 
-You can confirm the installation by checking if the Vidulum App shows up in the main menu of your Ledger device:
+You can confirm the installation by checking if the Beezee App shows up in the main menu of your Ledger device:
 
 <img src="./assets/ledger_desktop_wallet/s1-5-3.jpeg" />
 
@@ -116,9 +116,9 @@ You can confirm the installation by checking if the Vidulum App shows up in the 
 
 ## B-i. Ledger Wallet via Release Binary (CLI)
 
-#### Step 1. Get the Vidulum Chain binary
+#### Step 1. Get the Beezee Chain binary
 
-Download the Vidulum Chain Binary for Mainnet from [release page](https://github.com/crypto-org-chain/chain-main/releases/tag/v1.0.0) and extract the binary. Here we used Linux as an example:
+Download the Beezee Chain Binary for Mainnet from [release page](https://github.com/crypto-org-chain/chain-main/releases/tag/v1.0.0) and extract the binary. Here we used Linux as an example:
 
 ```bash
 $ curl -LOJ https://github.com/crypto-org-chain/chain-main/releases/download/v1.0.0/chain-main_1.0.0_Linux_x86_64.tar.gz
@@ -127,7 +127,7 @@ $ tar -zxvf chain-main_1.0.0_Linux_x86_64.tar.gz
 
 If you are downloading the binary for other operating systems, make sure you are downloading `v1.0.0`, which is the version targeting for mainnet.
 
-#### Step 2. Open the Vidulum Chain application on your Ledger device
+#### Step 2. Open the Beezee Chain application on your Ledger device
 
 #### Step 3. Create a new key and address
 
@@ -140,7 +140,7 @@ $ ./chain-maind keys add Ledger --ledger
 You will be prompted with the address on your Ledger device screen. Read it carefully and write it down. Afterward, confirm the address on your Ledger device.
 
 ::: tip Cannot Connect To Your Ledger Device?
-If you encounter connection error when creating a wallet, you can try to unplug and plug your Ledger device to your computer again. Please make sure your Ledger device is unlocked and you have opened the "Vidulum Chain" application on your Ledger.
+If you encounter connection error when creating a wallet, you can try to unplug and plug your Ledger device to your computer again. Please make sure your Ledger device is unlocked and you have opened the "Beezee Chain" application on your Ledger.
 :::
 
 #### Step 4. Verify the address displayed on the terminal, and make sure it matches the address you saw on Ledger device
@@ -157,12 +157,12 @@ If you encounter connection error when creating a wallet, you can try to unplug 
 
 ---
 
-## B-ii. Ledger Wallet via Vidulum Chain Desktop Wallet
+## B-ii. Ledger Wallet via Beezee Chain Desktop Wallet
 
 ::: warning DESKTOP WALLET IS IN BETA
 Desktop wallet is in beta testing. Please be aware of the [potential risks](https://github.com/crypto-com/chain-desktop-wallet#warning) of using it in mainnet. You should run it only on a trusted, safe and offline computer and always verify the mnemonic words before using the address.
 :::
-Download the latest version of the Vidulum Chain Desktop Wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases) and follow the steps below to create an address:
+Download the latest version of the Beezee Chain Desktop Wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases) and follow the steps below to create an address:
 
 #### Step 1. Open the application and click "Get Started" to set up an application password.
 
@@ -180,7 +180,7 @@ Download the latest version of the Vidulum Chain Desktop Wallet [here](https://g
 #### Step 4. Upon successful wallet creation, a warning message will be shown on the top right hand corner to remind you that the wallet is for address generation only and may not work when mainnet launch.
 
 ::: tip Cannot Connect To Your Ledger Device?
-If you encounter connection error when creating a wallet, you can try to unplug and plug your Ledger device to your computer again. Please make sure your Ledger device is unlocked and you have opened the "Vidulum Chain" application on your Ledger.
+If you encounter connection error when creating a wallet, you can try to unplug and plug your Ledger device to your computer again. Please make sure your Ledger device is unlocked and you have opened the "Beezee Chain" application on your Ledger.
 :::
 
 <img src="./assets/mainnet-address-generation/desktop-main-page.png" />
@@ -191,7 +191,7 @@ If you encounter connection error when creating a wallet, you can try to unplug 
 
 ## C. Programmatically
 
-You can generate the Mnemonic and address programmatically. Here is an example code snippet written in JavaScript using the [Vidulum Chain JavaScript Library](https://github.com/crypto-com/chain-jslib) to generate the mnemonic and the mainnet address:
+You can generate the Mnemonic and address programmatically. Here is an example code snippet written in JavaScript using the [Beezee Chain JavaScript Library](https://github.com/crypto-com/chain-jslib) to generate the mnemonic and the mainnet address:
 
 ```javascript
 // Import the library
@@ -220,7 +220,7 @@ const address = new cro.Address(keyPair).account();
 console.log(address);
 ```
 
-## D. Vidulum Chain Desktop Wallet (Beta)
+## D. Beezee Chain Desktop Wallet (Beta)
 
 Supported OS: Ubuntu, Mac OS and Windows
 
@@ -228,9 +228,9 @@ Supported OS: Ubuntu, Mac OS and Windows
 Desktop wallet is in beta testing. Please be aware of the [potential risks](https://github.com/crypto-com/chain-desktop-wallet#warning) of using it in mainnet. You should run it only on a trusted, safe and offline computer and always verify the mnemonic words before using the address.
 :::
 
-Download the latest version of the Vidulum Chain Desktop Wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases) and follow the steps below to create an address:
+Download the latest version of the Beezee Chain Desktop Wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases) and follow the steps below to create an address:
 
-#### Step 1. Open the Vidulum Chain application on your Ledger device
+#### Step 1. Open the Beezee Chain application on your Ledger device
 
 #### Step 2. Open the application and click "Get Started" to set up an application password.
 

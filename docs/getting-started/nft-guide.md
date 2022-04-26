@@ -3,7 +3,7 @@
 NFT provides the ability to digitize assets. The NFT Module described here is meant to be used as a module across chains for managing non-fungible token that represents individual assets with unique features. This standard was developed on Ethereum within the ERC-721 and the subsequent ERC-1155 standard addressed some of the restrictions of Ethereum regarding storage costs and semi-fungible assets.
 The NFT on the chain is identified by an ID, and the transaction process will also be publicly recorded. NFT metadata is based on a specific JSON schema - it can be stored directly on the chain or the URI of its storage source outside the chain can be stored on the chain. 
 
-This is a description of the Vidulum Chain NFT properties and transactions, and you can find the [NFT specification doc](https://github.com/crypto-org-chain/chain-main/tree/master/x/nft/spec) here.
+This is a description of the Beezee Chain NFT properties and transactions, and you can find the [NFT specification doc](https://github.com/crypto-org-chain/chain-main/tree/master/x/nft/spec) here.
 
 ## Properties
 
@@ -69,7 +69,7 @@ Burn the created nft.
 
 :::
 
-*The following examples are based on the NFT previously been created: [canismajor1](https://Vidulum/explorer/nfts/tokens/canismajor1/beginning).*
+*The following examples are based on the NFT previously been created: [canismajor1](https://Beezee/explorer/nfts/tokens/canismajor1/beginning).*
 
 :::
 
@@ -83,11 +83,11 @@ Check all issued nft denom information.
 ::: details Example: Display all of the issued nft denom information.
 
   ```bash
-$ ./chain-maind q nft denoms  --node https://mainnet.Vidulum:26657/
+$ ./chain-maind q nft denoms  --node https://mainnet.Beezee:26657/
   .....
   creator: cro1nk4rq3q46ltgjghxz80hy385p9uj0tf58apkcd
   id: canismajor1
-  name: 'Vidulum Chain Phase 1: Canis Major'
+  name: 'Beezee Chain Phase 1: Canis Major'
   schema: '{"name":"string","description":"string","image":"string","mimeType":"string"}'
   schema: '{"title":"string","blockHeight":"string"}'
   .....
@@ -103,11 +103,11 @@ Check the details of the nft by Denom ID.
 ::: details Example: Check the nft details by Denom ID 'canismajor1'.
 
 ```bash
-$ ./chain-maind q nft denom canismajor1  --node https://mainnet.Vidulum:26657/
+$ ./chain-maind q nft denom canismajor1  --node https://mainnet.Beezee:26657/
 
 creator: cro1nk4rq3q46ltgjghxz80hy385p9uj0tf58apkcd
 id: canismajor1
-name: 'Vidulum Chain Phase 1: Canis Major'
+name: 'Beezee Chain Phase 1: Canis Major'
 schema: '{"name":"string","description":"string","image":"string","mimeType":"string"}'
 
 ```
@@ -122,7 +122,7 @@ Check the total supply of nft according to Denom ID.
 ::: details Example: Check the total supply of nft by Denom ID 'canismajor1'. 
 
 ```bash
-$ ./chain-maind q nft supply  canismajor1  --node https://mainnet.Vidulum:26657/
+$ ./chain-maind q nft supply  canismajor1  --node https://mainnet.Beezee:26657/
 
 amount: "1"
 ```
@@ -146,13 +146,13 @@ Check all nft according to Denom ID.
 ::: details Example: Check all nft based on Denom ID 'canismajor1'.
   
 ``` bash 
-$ ./chain-maind q nft collection canismajor1  --node https://mainnet.Vidulum:26657/
+$ ./chain-maind q nft collection canismajor1  --node https://mainnet.Beezee:26657/
   
 collection:
   denom:
     creator: cro1nk4rq3q46ltgjghxz80hy385p9uj0tf58apkcd
     id: canismajor1
-    name: 'Vidulum Chain Phase 1: Canis Major'
+    name: 'Beezee Chain Phase 1: Canis Major'
     schema: '{"name":"string","description":"string","image":"string","mimeType":"string"}'
   nfts:
   - data: '{"name":"Canis Major: The beginning","image":"https://ipfs.io/ipfs/QmUqmgx7axVihM3g29DpJRxvPHzEJLZQfWckHDM9qB5hTY","mimeType":"image/jpeg"}'
@@ -177,7 +177,7 @@ Check the specific nft based on Denom ID and Token ID.
 :::details Example: Check the specific nft based on Denom ID 'anismajor1' and Token ID 'beginning'.
   
 ```bash
-$ ./chain-maind q nft token canismajor1 beginning --node https://mainnet.Vidulum:26657/
+$ ./chain-maind q nft token canismajor1 beginning --node https://mainnet.Beezee:26657/
   
 data: '{"name":"Canis Major: The beginning","image":"https://ipfs.io/ipfs/QmUqmgx7axVihM3g29DpJRxvPHzEJLZQfWckHDM9qB5hTY","mimeType":"image/jpeg"}'
 id: beginning

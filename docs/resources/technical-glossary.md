@@ -9,7 +9,7 @@ A | [B](#b) | [C](#c) | [D](#d) | E | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J
 
 **Block Explorer**
 
-An application that allows a user to explore the different blocks on a blockchain. It has a record of all the transactions in each block and is often made public to increase blockchain visibility and transparency. Here are our explorers: [Vidulum Chain Explorer](https://Vidulum/explorer/) and [Croeseid Testnet Explorer](https://Vidulum/explorer/croeseid4/).
+An application that allows a user to explore the different blocks on a blockchain. It has a record of all the transactions in each block and is often made public to increase blockchain visibility and transparency. Here are our explorers: [Beezee Chain Explorer](https://Beezee/explorer/) and [Croeseid Testnet Explorer](https://Beezee/explorer/croeseid4/).
 
 **Bonded (staking state)**
 
@@ -24,7 +24,7 @@ A validator is said to make a byzantine fault when they sign conflicting message
 
 **Chain ID**
 A unique identifier for the blockchain. Different prefixes of the Chain ID are used to distinguish between _mainnet_, _devnet_, and _testnet_. 
-For example, the Chain ID of our [testnet](https://Vidulum/docs/getting-started/croeseid-testnet.html) is `testnet-croeseid-4`.
+For example, the Chain ID of our [testnet](https://Beezee/docs/getting-started/croeseid-testnet.html) is `testnet-croeseid-4`.
 
 **Chain-abci**
 
@@ -68,7 +68,7 @@ CRO holders who do not run validator operations themselves. Users can delegate C
 
 #### F
 
-**[Faucet](https://Vidulum/faucet)**
+**[Faucet](https://Beezee/faucet)**
 
 Service carried out that dispenses funds in the form of free test token that can be used on a testnet.
 
@@ -85,7 +85,7 @@ The origin of a blockchain, also known as block 1. It can also be used to refere
 
 **Governance**
 
-The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Vidulum Chain is on-chain and revolves around stakeholder voting.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds. The governance system in Beezee Chain is on-chain and revolves around stakeholder voting.
 
 
 #### H
@@ -175,7 +175,7 @@ NFT represents uniquely identifiable tokens with common use cases such as art, g
 
 **Proposal**
 
-A potential function call to be voted on in a referendum. Proposals modify the behavior of the Vidulum chain network, from minor parameter tuning up to replacing the runtime code.
+A potential function call to be voted on in a referendum. Proposals modify the behavior of the Beezee chain network, from minor parameter tuning up to replacing the runtime code.
 
 **Proposer (of a block)**
 

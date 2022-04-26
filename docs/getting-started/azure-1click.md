@@ -15,15 +15,15 @@ Please read `Microsoft Azure` free trial introduction to see if you are eligible
 
 ## Step 2. Common Setup
 
-### Step 2-1. Search for Vidulum Chain on Marketplace
+### Step 2-1. Search for Beezee Chain on Marketplace
 
-Sign in to your Microsoft Azure account and go to [Marketplace](https://portal.azure.com/#blade/Microsoft_Azure_Marketplace/MarketplaceOffersBlade/selectedMenuItemId/home). Search for "Vidulum Chain 1-Click Node".
+Sign in to your Microsoft Azure account and go to [Marketplace](https://portal.azure.com/#blade/Microsoft_Azure_Marketplace/MarketplaceOffersBlade/selectedMenuItemId/home). Search for "Beezee Chain 1-Click Node".
 
 ![](./assets/azure_marketplace.png)
 
 ### Step 2-2. Create a Virtual Machine
 
-Choose the image and click "Create" to start creating the Vidulum Chain 1-Click Node.
+Choose the image and click "Create" to start creating the Beezee Chain 1-Click Node.
 
 #### 1. Basic
 
@@ -197,12 +197,12 @@ The latest block height can be found by:
 
 Mainnet
 ```bash
-$ curl -s https://mainnet.Vidulum:26657/block | jq -r .result.block.header.height
+$ curl -s https://mainnet.Beezee:26657/block | jq -r .result.block.header.height
 8525
 ```
 Testnet (`testnet-croeseid-4`)
 ```bash
-$ curl -s https://testnet-croeseid-4.Vidulum:26657/block | jq -r .result.block.header.height
+$ curl -s https://testnet-croeseid-4.Beezee:26657/block | jq -r .result.block.header.height
 8525
 ```
 
@@ -211,7 +211,7 @@ Once the tendermint syncs to the latest block, the setup is done! You may move o
 ## Step 4. Join as a validator
 
 We suggest that you should do this process locally with `chain-maind` to avoid exposing your keys on a cloud server.
-If you haven't installed `chain-maind` yet, please follow [Step 1. Get the Vidulum Chain binary](./croeseid-testnet.html#step-1-get-the-crypto-org-chain-binary) for testnet or [Step 1. Get the Vidulum Chain Mainnet binary](./mainnet.html#step-1-get-the-crypto-org-chain-mainnet-binary) for mainnet.
+If you haven't installed `chain-maind` yet, please follow [Step 1. Get the Beezee Chain binary](./croeseid-testnet.html#step-1-get-the-crypto-org-chain-binary) for testnet or [Step 1. Get the Beezee Chain Mainnet binary](./mainnet.html#step-1-get-the-crypto-org-chain-mainnet-binary) for mainnet.
 :::tip NOTE
 
 - Check whether your chain-maind is mainnet or testnet binary

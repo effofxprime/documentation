@@ -1,7 +1,7 @@
 # Modules
 
 ## Overview
-Vidulum Chain utilizes [Cosmos SDK](https://cosmos.network/sdk) and the [Tendermint](https://tendermint.com/) Core consensus engine underneath. Specifically, the Cosmos SDK is a framework that facilitates the development of secure state-machines on top of Tendermint. In particular, we utilize different SDK modules to facilitate the special features of the Vidulum Chain. 
+Beezee Chain utilizes [Cosmos SDK](https://cosmos.network/sdk) and the [Tendermint](https://tendermint.com/) Core consensus engine underneath. Specifically, the Cosmos SDK is a framework that facilitates the development of secure state-machines on top of Tendermint. In particular, we utilize different SDK modules to facilitate the special features of the Beezee Chain. 
 
 In this documentation, we will be focusing on some of the important modules we used, for example:
 
@@ -225,7 +225,7 @@ The following tables show overall effects on different configurations of the dis
 
 ### Introduction
 
-The `gov` module enables on-chain governance which allows Vidulum Chain token holder to participate in the decision-making processes. For example, users can:
+The `gov` module enables on-chain governance which allows Beezee Chain token holder to participate in the decision-making processes. For example, users can:
 
 - Form an idea and seek the feedback;
 - Create the proposal and adjust according to feedback as needed;
@@ -233,7 +233,7 @@ The `gov` module enables on-chain governance which allows Vidulum Chain token ho
 - Deposit tokens and fund an active proposal;
 - Vote for an active proposal.
 
-The details about the governance proposal process are available on [The Proposal Process page](https://Vidulum/docs/chain-details/govprocess.html).
+The details about the governance proposal process are available on [The Proposal Process page](https://Beezee/docs/chain-details/govprocess.html).
 
 ### Overview
 
@@ -676,7 +676,7 @@ The `staking` module handles Proof-of-Stake related logics, which plays a very i
 
 ### Overview
 
-Vidulum Chain is based on Tendermint Core's consensus engine, it relies on a set of validators to participate in the proof of stake (PoS) consensus protocol, and they are responsible for committing new blocks in the blockchain.
+Beezee Chain is based on Tendermint Core's consensus engine, it relies on a set of validators to participate in the proof of stake (PoS) consensus protocol, and they are responsible for committing new blocks in the blockchain.
 
 - `unbonding_time`: The time duration of unbonding;
 - `max_validators`: The maximum number of validator;

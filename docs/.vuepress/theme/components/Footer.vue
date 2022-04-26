@@ -15,17 +15,15 @@
           <div class="column">
             <h3>Developers</h3>
             <div class="link">
-              <a href="https://explorers.vidulum.app" target="_blank">
+              <a href="https://explorer.erialos.me" target="_blank">
                 Explorers
               </a>
             </div>
             <div class="link">
-              <a href="/getting-started">
-                Documentation
-              </a>
+              <a href="/getting-started"> Documentation </a>
             </div>
             <div class="link">
-              <a href="https://vidulum.app/testnet-faucet" target="_blank">
+              <a href="https://getbze.com/testnet-faucet" target="_blank">
                 Faucet
               </a>
             </div>
@@ -33,35 +31,56 @@
           <div class="column">
             <h3>Wallets</h3>
             <div class="link">
-              <a href="https://play.google.com/store/apps/details?id=com.vidulumwallet.app" target="_blank">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.vidulumwallet.app"
+                target="_blank"
+              >
                 Android
               </a>
             </div>
             <div class="link">
-              <a href="https://apps.apple.com/us/app/id1505859171" target="_blank">
+              <a
+                href="https://apps.apple.com/us/app/id1505859171"
+                target="_blank"
+              >
                 iOS
               </a>
-            </div>            
+            </div>
           </div>
         </div>
         <div class="socials">
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/VidulumApp">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/VidulumApp"
+          >
             <img :src="$withBase('/social/twitter.svg')" alt="twitter" />
           </a>
-          <a target="_blank" rel="noopener noreferrer"
-            href="https://www.youtube.com/channel/UCNd92ZViZweu6zz5ydt_wrQ">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/channel/UCNd92ZViZweu6zz5ydt_wrQ"
+          >
             <img :src="$withBase('/social/youtube.svg')" alt="youtube" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/VidulumOfficial/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.reddit.com/r/VidulumOfficial/"
+          >
             <img :src="$withBase('/social/reddit.svg')" alt="reddit" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hne7Ccq">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/hne7Ccq"
+          >
             <img :src="$withBase('/social/discord.svg')" alt="discord" />
           </a>
         </div>
       </div>
       <p class="copyright">
-        Copyright © {{ currentYear }} Vidulum. All rights reserved.
+        Copyright © {{ currentYear }} Beezee. All rights reserved.
       </p>
     </div>
   </footer>

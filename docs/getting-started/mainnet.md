@@ -11,10 +11,10 @@
       - [Download and extract repository](#download-and-extract-repository)
     - [Firewall Configuration](#firewall-configuration)
     - [systemd Service Configuration](#systemd-service-configuration)
-  - [SECTION 2: Build and Initiate Vidulum Node](#section-2-build-and-initiate-vidulum-node)
+  - [SECTION 2: Build and Initiate Beezee Node](#section-2-build-and-initiate-beezee-node)
     - [Add Go environmental variables](#add-go-environmental-variables)
-    - [Build Vidulum binaries](#build-vidulum-binaries)
-    - [Vidulum Node Init](#vidulum-node-init)
+    - [Build Beezee binaries](#build-beezee-binaries)
+    - [Beezee Node Init](#beezee-node-init)
     - [Start node](#start-node)
   - [SECTION 3: Promote Full Node to Validator Role](#section-3-promote-full-node-to-validator-role)
     - [Create Wallet](#create-wallet)
@@ -47,11 +47,11 @@ All tasks in **SECTION 1** have to be performed as **root**
 ### Add dedicated user
 
 ```bash
-sudo adduser vidulum
+sudo adduser bze
 ```
 ### Install prerequisites
 
-Update and install *make*, which is needed to compile vidulum:
+Update and install *make*, which is needed to compile bze:
 ```bash
 apt-get update
 apt-get install -y build-essential
@@ -75,29 +75,29 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-amd64.ta
 ufw limit ssh/tcp comment 'Rate limit for openssh server'
 ufw default deny incoming
 ufw default allow outgoing
-ufw allow 26656/tcp comment 'Cosmos SDK/Tendermint P2P (Vidulum Validator)'
+ufw allow 26656/tcp comment 'Cosmos SDK/Tendermint P2P (Beezee Validator)'
 ufw enable
 ```
 
 ### systemd Service Configuration
 
-Create a service file **_/lib/systemd/system/vidulum.service_** 
+Create a service file **_/etc/systemd/system/bze.service_** 
 ```bash
-nano /lib/systemd/system/vidulum.service
+nano /etc/systemd/system/bze.service
 ```
 
 Paste the following text into the editor and save the file:
 
 ```bash
 [Unit]
-Description=Vidulum Validator
+Description=Beezee Validator
 After=network.target
 
 [Service]
-Group=vidulum
-User=vidulum
-WorkingDirectory=/home/vidulum
-ExecStart=/home/vidulum/.local/bin/vidulumd start
+Group=bze
+User=bze
+WorkingDirectory=/home/bze
+ExecStart=/home/bze/.local/bin/bzed start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=8192
@@ -109,17 +109,17 @@ WantedBy=multi-user.target
 Reload the systemd configuration and enable the service.
 
 ```bash
-systemctl daemon-reload && systemctl enable vidulum.service
+systemctl daemon-reload && systemctl enable bze.service
 ```
 
-## SECTION 2: Build and Initiate Vidulum Node
+## SECTION 2: Build and Initiate Beezee Node
 
 ::: warning NOTE:
-All tasks in **SECTION 2** must be performed as the **vidulum** user created in **SECTION 1**
+All tasks in **SECTION 2** must be performed as the **bze** user created in **SECTION 1**
 :::
 
 ```bash
-su - vidulum
+su - bze
 ```
 
 ### Add Go environmental variables
@@ -144,9 +144,9 @@ Once modified and saved, reload `${HOME}/.profile` to set variables in the curre
 . ~/.profile
 ```
 
-### Build Vidulum binaries
+### Build Beezee binaries
 
-Before we build the binaries for a Vidulum node/validator, create a folder where the binaries will be stored.
+Before we build the binaries for a Beezee node/validator, create a folder where the binaries will be stored.
 Ubuntu adds this folder to search path, when it exists, so we can easily run binaries in future when needed.
 
 ```bash
@@ -154,24 +154,24 @@ mkdir -p ${HOME}/.local/bin
 . ~/.profile
 ```
 
-Clone the Vidulum GitHub repository, build the binaries, and move it to your users local bin directory.
+Clone the Beezee GitHub repository, build the binaries, and move it to your users local bin directory.
 
 ```bash
-git clone https://github.com/vidulum/mainnet && cd mainnet && make install
-mv ${HOME}/go/bin/vidulumd ${HOME}/.local/bin
+git clone https://github.com/bze-alphateam/bze.git && cd mainnet && make install
+mv ${HOME}/go/bin/bzed ${HOME}/.local/bin
 ```
 
-### Vidulum Node Init
+### Beezee Node Init
 
 ```bash
-vidulumd init NODE_NAME --chain-id vidulum-1
+bzed init NODE_NAME --chain-id beezee-1
 ```
 
 ::: tip NOTE:
 Replace NODE_NAME with the name you want to assign to your validator.
 :::
 
-In **_\${HOME}/.vidulum/config/config.toml_** find the **_[p2p]_** section, and change the following to match:
+In **_\${HOME}/.bze/config/config.toml_** find the **_[p2p]_** section, and change the following to match:
 
 ```bash
 seeds = "883ec7d5af7222c206674c20c997ccc5c242b38b@ec2-3-82-120-39.compute-1.amazonaws.com:26656,eed11fff15b1eca8016c6a0194d86e4a60a65f9b@apollo.erialos.me:26656"
@@ -180,7 +180,7 @@ seeds = "883ec7d5af7222c206674c20c997ccc5c242b38b@ec2-3-82-120-39.compute-1.amaz
 Now it is time to download **_genesis.json_** file, which will allow the node to synchronize
 
 ```bash
-wget https://raw.githubusercontent.com/vidulum/mainnet/main/genesis.json -O ${HOME}/.vidulum/config/genesis.json
+wget https://raw.githubusercontent.com/bze-alphateam/bze/main/genesis.json -O ${HOME}/.bze/config/genesis.json
 ```
 
 ### Start node
@@ -188,13 +188,13 @@ wget https://raw.githubusercontent.com/vidulum/mainnet/main/genesis.json -O ${HO
 Once the node is configured, you can start it, and begin to synchronize the blockchain database.
 
 ```bash
-sudo systemctl start vidulum.service
+sudo systemctl start bze.service
 ```
 
-To keep watching logs generated by Vidulum node use the command:
+To keep watching logs generated by Beezee node use the command:
 
 ```bash
-journalctl -u vidulum -f
+journalctl -u bze -f
 ```
 
 Envoke watch with curl to check the status every 60 seconds if node has finished **catching up** and has fully synchronized the blockchain:
@@ -225,22 +225,22 @@ You will see JSON output where you need to locate **_catching_up_** field. When 
 ## SECTION 3: Promote Full Node to Validator Role
 
 ::: warning NOTE:
-All tasks in **SECTION 3** have to be performed as the **vidulum** user created in **SECTION 1**.<br>
+All tasks in **SECTION 3** have to be performed as the **bze** user created in **SECTION 1**.<br>
 **ONLY** continue this section if you have plans to impliment a validator node. 
 :::
 ```bash
-su - vidulum
+su - bze
 ```
 
-In order to create a validator, you must have a Vidulum wallet and at least 2 VDL that you must self delegate as the validator.
+In order to create a validator, you must have a Beezee wallet and at least 2 VDL that you must self delegate as the validator.
 
 
 ### Create Wallet
 
-In order to create a Vidulum wallet we use binaries we compiled earlier.
+In order to create a Beezee wallet we use binaries we compiled earlier.
 
 ```bash
-vidulumd keys add WALLET_NAME --keyring-backend os
+bzed keys add WALLET_NAME --keyring-backend os
 ```
 
 You will be asked to provide a password.  You will use this to claim rewards, commission, and vote.
@@ -265,10 +265,10 @@ some words forming mnemonic seed will be placed here you have to write them down
 Write or print out your `mnemonic seed` and keep it in a safe place if you ever need to restore your validator's wallet.
 :::
 
-Now you have to transfer some vidulum to your validator wallet. To check the balance on your account:
+Now you have to transfer some beezee to your validator wallet. To check the balance on your account:
 
 ```bash
-vidulumd query bank balances vdl1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
+bzed query bank balances vdl1hjhglrzggqtdhsh3ag8jp0cckmva5pe976jxel
 ```
 
 The output will be similar to this:
@@ -283,7 +283,7 @@ pagination:
 ```
 
 ::: tip NOTE:
-Denomiation presented by command is in uvdl(micro-vidulum). Use this formula to convert, 1 VDL = 1,000,000 uVDL.
+Denomiation presented by command is in uvdl(micro-beezee). Use this formula to convert, 1 VDL = 1,000,000 uVDL.
 :::
 
 ### Create Validator
@@ -291,17 +291,17 @@ Denomiation presented by command is in uvdl(micro-vidulum). Use this formula to 
 Once you have funds in your validator wallet, promote your full node to a validator:
 
 ```bash
-vidulumd tx staking create-validator \
+bzed tx staking create-validator \
     --commission-max-change-rate="0.05" \
     --commission-max-rate="0.3" \
     --commission-rate="0.11" \
     --amount="10000000uvdl" \
-    --pubkey=$(vidulumd tendermint show-validator) \
+    --pubkey=$(bzed tendermint show-validator) \
     --website="https://your.website" \
     --details="Description of your validator." \
     --security-contact="contact@your.domain" \
     --moniker=NODE_NAME \
-    --chain-id=vidulum-1 \
+    --chain-id=beezee-1 \
     --min-self-delegation="1" \
     --gas auto \
     --gas-adjustment=1.2 \
@@ -315,5 +315,5 @@ The commission max rate cannot be changed once set! <br>
 The commission rate may be changed *once* daily.
 :::
 
-Once that is done, wait a few moments, and you should see your node listed in [Vidulum Explorer](https://explorers.vidulum.app/vidulum/staking)<br>
-Or [Ping.Pub Vidulum Explorer](https://ping.pub/vidulum/uptime)
+Once that is done, wait a few moments, and you should see your node listed in [Beezee Explorer](https://explorer.erialos.me/BeeZee/staking)<br>
+Or [Ping.Pub Beezee Explorer](https://ping.pub/BeeZee/uptime)

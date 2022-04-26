@@ -1,8 +1,8 @@
 # Testnet: Running Nodes
 
-The latest Vidulum Chain Testnet has been named as **testvidulum-1**.
+The latest Beezee Chain Testnet has been named as **testvidulum-1**.
 
-This is a detailed documentation for setting up a Validator or a full node on Vidulum Croeseid testnet `testnet-croeseid-4`.
+This is a detailed documentation for setting up a Validator or a full node on Beezee Croeseid testnet `testnet-croeseid-4`.
 
 ## Pre-requisites
 
@@ -13,14 +13,14 @@ We officially support macOS, Windows and Linux only. Other platforms may work bu
 
 ### Prepare your machine
 
-- To run Vidulum Chain nodes in the testnet, you will need a machine with the following minimum requirements:
+- To run Beezee Chain nodes in the testnet, you will need a machine with the following minimum requirements:
 
   - Dual-core, x86_64 architecture processor;
   - 4 GB RAM;
   - 100 GB of storage space.
 
 
-## Step 1. Get the Vidulum Chain testnet binary
+## Step 1. Get the Beezee Chain testnet binary
 
 ::: tip Remarks:
 The following is the minimal setup for a **validator node**. 
@@ -33,7 +33,7 @@ The binary for _testnet_ and the binary for _mainnet_ are two **different** bina
 To simplify the following step, we will be using **Linux** (Intel x86) for illustration. Binary for
 **Mac** ([Intel x86](https://github.com/crypto-org-chain/chain-main/releases/download/v3.0.0-croeseid/chain-main_3.0.0-croeseid_Darwin_x86_64.tar.gz) / [M1](https://github.com/crypto-org-chain/chain-main/releases/download/v3.0.0-croeseid/chain-main_3.0.0-croeseid_Darwin_arm64.tar.gz))and [Windows](https://github.com/crypto-org-chain/chain-main/releases/download/v3.0.0-croeseid/chain-main_3.0.0-croeseid_Windows_x86_64.zip) are also available.
 
-- To install Vidulum Chain released **testnet binaries** from github:
+- To install Beezee Chain released **testnet binaries** from github:
 
   ```bash
   $ curl -LOJ https://github.com/crypto-org-chain/chain-main/releases/download/v3.0.0-croeseid/chain-main_3.0.0-croeseid_Linux_x86_64.tar.gz
@@ -77,7 +77,7 @@ Before kick-starting your node, we will have to configure your node so that it c
     $ ./chain-maind init [moniker] --chain-id testnet-croeseid-4
   ```
 
-  This `moniker` will be the displayed id of your node when connected to Vidulum Chain network.
+  This `moniker` will be the displayed id of your node when connected to Beezee Chain network.
   When providing the moniker value, make sure you drop the square brackets since they are not needed.
   The example below shows how to initialize a node named `pegasus-node` :
 
@@ -148,12 +148,12 @@ Follow the below optional steps to enable state-sync.
 
   ```bash
 
-  $ LATEST_HEIGHT=$(curl -s https://testnet-croeseid-4.Vidulum:26657/block | jq -r .result.block.header.height); \
+  $ LATEST_HEIGHT=$(curl -s https://testnet-croeseid-4.Beezee:26657/block | jq -r .result.block.header.height); \
   BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
-  TRUST_HASH=$(curl -s "https://testnet-croeseid-4.Vidulum:26657/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+  TRUST_HASH=$(curl -s "https://testnet-croeseid-4.Beezee:26657/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
   $ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-  s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"https://testnet-croeseid-4.Vidulum:26657,https://testnet-croeseid-4.Vidulum:26657\"| ; \
+  s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"https://testnet-croeseid-4.Beezee:26657,https://testnet-croeseid-4.Beezee:26657\"| ; \
   s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
   s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
   s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.chain-maind/config/config.toml
@@ -186,7 +186,7 @@ You should obtain an address with `tcro` prefix, e.g. `tcro1quw5r22pxy8znjtdkgqc
 
 ### Step 3-2. Obtain test token
 
-Unless you have obtained the CRO testnet token before, use the [tcro faucet](https://Vidulum/faucet) to obtain test CRO tokens.
+Unless you have obtained the CRO testnet token before, use the [tcro faucet](https://Beezee/faucet) to obtain test CRO tokens.
 In case you have reached the daily limit on faucet airdrop, you can simply send a message on [Discord](https://discord.gg/pahqHz26q4) #request-tcro channel ,
 stating who you are and your `tcro.....` address.
 
@@ -275,7 +275,7 @@ It should begin fetching blocks from the other peers. Please wait until it is fu
 - One can check the current block height by querying the public full node by:
 
   ```bash
-  curl -s https://testnet-croeseid-4.Vidulum:26657/commit | jq "{height: .result.signed_header.header.height}"
+  curl -s https://testnet-croeseid-4.Beezee:26657/commit | jq "{height: .result.signed_header.header.height}"
   ```
 
   and you can check your node's progress (in terms of block height) by
@@ -328,7 +328,7 @@ To further check if the validator is signing blocks, kindly run this [script](ht
 
 ```bash
 $ curl -sSL https://raw.githubusercontent.com/crypto-com/chain-docs/master/docs/getting-started/assets/signature_checking/check-validator-up.sh | bash -s -- \
---tendermint-url https://testnet-croeseid-4.Vidulum:26657 \
+--tendermint-url https://testnet-croeseid-4.Beezee:26657 \
 --pubkey $(cat ~/.chain-maind/config/priv_validator_key.json | jq -r '.pub_key.value')
 
 The validator is in the active validator set under the address  <YOUR_VALIDATOR_ADDRESS>
@@ -337,7 +337,7 @@ The validator is signing @ Block#<BLOCK_HEIGHT> 👍
 
 ```bash
 $ curl -sSL https://raw.githubusercontent.com/crypto-com/chain-docs/master/docs/getting-started/assets/signature_checking/check-validator-up.sh | bash -s -- \
---tendermint-url https://testnet-croeseid-4.Vidulum:26657 \
+--tendermint-url https://testnet-croeseid-4.Beezee:26657 \
 --bechpubkey [tcrocnclconspub1....]
 
 The validator is in the active validator set under the address  <YOUR_VALIDATOR_ADDRESS>
@@ -496,11 +496,11 @@ $ ./chain-maind tx slashing unjail --from [key_name] --chain-id "testnet-croesei
 
 :::
 
-Congratulations! You've successfully set up a Testnet node and performed some basic transactions! You may refer to [Wallet Management](https://Vidulum/docs/wallets/cli.html#chain-maind) for more advanced operations and transactions.
+Congratulations! You've successfully set up a Testnet node and performed some basic transactions! You may refer to [Wallet Management](https://Beezee/docs/wallets/cli.html#chain-maind) for more advanced operations and transactions.
 
 ## Croeseid testnet faucet and explorer
 
-- You can lookup data within the `testnet-croeseid-4` network by the [explorer](https://Vidulum/explorer/croeseid4/);
+- You can lookup data within the `testnet-croeseid-4` network by the [explorer](https://Beezee/explorer/croeseid4/);
 
-- To interact with the blockchain, simply use the [test-token faucet](https://Vidulum/faucet) to obtain test CRO tokens for performing transactions on the **Croeseid** testnet.
+- To interact with the blockchain, simply use the [test-token faucet](https://Beezee/faucet) to obtain test CRO tokens for performing transactions on the **Croeseid** testnet.
   - Note that you will need to create an [address](#step-3-1-create-a-new-key-and-address) before using the faucet.

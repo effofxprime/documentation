@@ -2,21 +2,22 @@
 
 <!-- MarkdownTOC autolink="true" -->
 
-- [SECTION 0: Requirements](#section-0-requirements)
-- [SECTION 1: System preparation](#section-1-system-preparation)
-  - [Add dedicated user](#add-dedicated-user)
-  - [Go deployment](#go-deployment)
-    - [Download and extract repository](#download-and-extract-repository)
-  - [Firewall Configuration](#firewall-configuration)
-  - [systemd Service Configuration](#systemd-service-configuration)
-- [SECTION 2: Build and Initiate Vidulum Testnet Node](#section-2-build-and-initiate-vidulum-testnet-node)
-  - [Add Go environmental variables](#add-go-environmental-variables)
-  - [Build Vidulum binaries](#build-vidulum-binaries)
-  - [Vidulum Node Init](#vidulum-node-init)
-  - [Start node](#start-node)
-- [SECTION 3: Promote Full Node to Validator Role](#section-3-promote-full-node-to-validator-role)
-  - [Create Wallet](#create-wallet)
-  - [Create Validator](#create-validator)
+- [Testnet Full Node & Validator](#testnet-full-node--validator)
+  - [SECTION 0: Requirements](#section-0-requirements)
+  - [SECTION 1: System preparation](#section-1-system-preparation)
+    - [Add dedicated user](#add-dedicated-user)
+    - [Go deployment](#go-deployment)
+      - [Download and extract repository](#download-and-extract-repository)
+    - [Firewall Configuration](#firewall-configuration)
+    - [systemd Service Configuration](#systemd-service-configuration)
+  - [SECTION 2: Build and Initiate Beezee Testnet Node](#section-2-build-and-initiate-beezee-testnet-node)
+    - [Add Go environmental variables](#add-go-environmental-variables)
+    - [Build Beezee binaries](#build-beezee-binaries)
+    - [Beezee Node Init](#beezee-node-init)
+    - [Start node](#start-node)
+  - [SECTION 3: Promote Full Node to Validator Role](#section-3-promote-full-node-to-validator-role)
+    - [Create Wallet](#create-wallet)
+    - [Create Validator](#create-validator)
 
 <!-- /MarkdownTOC -->
 
@@ -45,7 +46,7 @@ All tasks in **SECTION 1** have to be performed as **root**
 ### Add dedicated user
 
 ```bash
-sudo adduser testvidulum
+sudo adduser testbze
 ```
 
 ### Go deployment
@@ -66,24 +67,24 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-amd64.ta
 ufw limit ssh/tcp comment 'Rate limit for openssh server'
 ufw default deny incoming
 ufw default allow outgoing
-ufw allow 26656/tcp comment 'Cosmos SDK/Tendermint P2P (Vidulum Testnet Validator)'
+ufw allow 26656/tcp comment 'Cosmos SDK/Tendermint P2P (Beezee Testnet Validator)'
 ufw enable
 ```
 
 ### systemd Service Configuration
 
-Create service file **_/lib/systemd/system/testvidulum.service_** for **Vidulum Testnet Validator** with following content:
+Create service file **_/lib/systemd/system/testbze.service_** for **Beezee Testnet Validator** with following content:
 
 ```bash
 [Unit]
-Description=Vidulum Testnet Validator
+Description=Beezee Testnet Validator
 After=network.target
 
 [Service]
-Group=testvidulum
-User=testvidulum
-WorkingDirectory=/home/testvidulum
-ExecStart=/home/testvidulum/.local/bin/testvidulumd start
+Group=testbze
+User=testbze
+WorkingDirectory=/home/testbze
+ExecStart=/home/testbze/.local/bin/testbzed start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=8192
@@ -95,13 +96,13 @@ WantedBy=multi-user.target
 Once file is created you can reload systemd configuration and enable service.
 
 ```bash
-systemctl daemon-reload && systemctl enable testvidulum.service
+systemctl daemon-reload && systemctl enable testbze.service
 ```
 
-## SECTION 2: Build and Initiate Vidulum Testnet Node
+## SECTION 2: Build and Initiate Beezee Testnet Node
 
 ::: tip NOTE:
-All tasks in **SECTION 2** have to be performed as **testvidulum** user created in **SECTION 1**
+All tasks in **SECTION 2** have to be performed as **testbze** user created in **SECTION 1**
 :::
 
 ### Add Go environmental variables
@@ -126,9 +127,9 @@ Once modified and saved, reload `${HOME}/.profile` to set variables in current u
 . ~/.profile
 ```
 
-### Build Vidulum binaries
+### Build Beezee binaries
 
-Before we build binaries for Vidulum testnet node/validator we create folder where binaries will be stored.
+Before we build binaries for Beezee testnet node/validator we create folder where binaries will be stored.
 Ubuntu adds this folder to search path, when it exists, so we can easily run binaries in future when needed.
 
 ```bash
@@ -136,24 +137,24 @@ mkdir -p ${HOME}/.local/bin
 . ~/.profile
 ```
 
-Now clone GitHub repository with Vidulum source code, build binaries and place in correct folder.
+Now clone GitHub repository with Beezee source code, build binaries and place in correct folder.
 
 ```bash
-git clone https://github.com/vidulum/testvidulum && cd testvidulum && make install
-mv ${HOME}/go/bin/testvidulumd ${HOME}/.local/bin
+git clone **COOMING SOON** && cd testbze && make install
+mv ${HOME}/go/bin/testbzed ${HOME}/.local/bin
 ```
 
-### Vidulum Node Init
+### Beezee Node Init
 
 ```bash
-testvidulumd init NODE_NAME --chain-id testvidulum-1
+testbzed init NODE_NAME --chain-id testbeezee-1
 ```
 
 ::: tip NOTE:
 Replace NODE_NAME with name you want to assign to your validator.
 :::
 
-In **_\${HOME}/.testvidulum/config/config.toml_** fine line which starts with **_persistent_peers =_** and replace with following content
+In **_\${HOME}/.testbze/config/config.toml_** fine line which starts with **_persistent_peers =_** and replace with following content
 
 ```bash
 persistent_peers =“e7ef78bb156f04f667e4a23a0782e4b1bb673165@216.128.150.25:26656,b9361329891f1acda1f93e55f73642736759e5bb@66.42.124.230:26656”
@@ -162,7 +163,7 @@ persistent_peers =“e7ef78bb156f04f667e4a23a0782e4b1bb673165@216.128.150.25:266
 Now it is time to download **_genesis.json_** file, which will allow node synchronization
 
 ```bash
-wget https://github.com/vidulum/testvidulum/releases/download/v1.0/genesis.json -O ${HOME}/.testvidulum/config/genesis.json
+wget **COMING SOON** -O ${HOME}/.testbze/config/genesis.json
 ```
 
 ### Start node
@@ -170,13 +171,13 @@ wget https://github.com/vidulum/testvidulum/releases/download/v1.0/genesis.json 
 Once node is configured you can start it and synchronize chain database.
 
 ```bash
-sudo systemctl start testvidulum.service
+sudo systemctl start testbze.service
 ```
 
-To keep watching logs generated by Vidulum node use command below.
+To keep watching logs generated by Beezee node use command below.
 
 ```bash
-journalctl -u testvidulum -f
+journalctl -u testbze -f
 ```
 
 To check, if node is synchronized.
@@ -207,18 +208,18 @@ You will see JSON output where you need to locate **_catching_up_** field. When 
 ## SECTION 3: Promote Full Node to Validator Role
 
 ::: tip NOTE:
-All tasks in **SECTION 3** have to be performed as **testvidulum** user created in **SECTION 1**.
+All tasks in **SECTION 3** have to be performed as **testbze** user created in **SECTION 1**.
 Steps in this section will allow to promote full node to validator role. If you need full node only, skip this section.
 :::
 
-In order to create validator you need to have Vidulum account and some funds, whcih can be delegated to validator.
+In order to create validator you need to have Beezee account and some funds, whcih can be delegated to validator.
 
 ### Create Wallet
 
-In order to create Vidulum wallet we use binaries we compiled earlier.
+In order to create Beezee wallet we use binaries we compiled earlier.
 
 ```bash
-testvidulumd keys add WALLET_NAME --keyring-backend os
+testbzed keys add WALLET_NAME --keyring-backend os
 ```
 
 You will be asked to provide password, which will protect keyring.
@@ -240,17 +241,17 @@ some words forming mnemonic seed will be placed here you have to write them down
 ```
 
 ::: tip NOTE:
-When you generate wallet in last line you will have line full of random words. This is mnemonic seed (allows to restore wallet). Write that down and keep safe. Using mnemonic you will be able to restore your account on another machine and access your funds. Lost of mnemonic might drive to inability to access your funds stored on Vidulum testnet chain.
+When you generate wallet in last line you will have line full of random words. This is mnemonic seed (allows to restore wallet). Write that down and keep safe. Using mnemonic you will be able to restore your account on another machine and access your funds. Lost of mnemonic might drive to inability to access your funds stored on Beezee testnet chain.
 :::
 
 In order to get some initial funds for your test node/validator you can visit faucet.
 
-- [Vidulum Testnet Faucet](https://vidulum.app/testnet-faucet)
+- [Beezee Testnet Faucet](https://getbze.com/testnet-faucet)
 
 Once you request funds from faucet check balance on your account:
 
 ```bash
-testvidulumd query bank balances testvdl1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
+testbzed query bank balances testvdl1u9a5u30svfrhajq7jgquc02956lxgezwx2lnkx
 ```
 
 Output will be similar to this:
@@ -273,17 +274,17 @@ Denomiation presented by command is in uvdl. For your information 1vdl = 1000000
 Now we can turn full node into validator using account and funds created in previous steps.
 
 ```bash
-testvidulumd tx staking create-validator \
+testbzed tx staking create-validator \
     --commission-max-change-rate="0.05" \
     --commission-max-rate="0.3" \
     --commission-rate="0.1" \
     --amount="10000000uvdl" \
-    --pubkey=$(testvidulumd tendermint show-validator) \
+    --pubkey=$(testbzed tendermint show-validator) \
     --website="https://your.website" \
     --details="Description of your validator." \
     --security-contact="contact@your.domain" \
     --moniker=NODE_NAME \
-    --chain-id=vidulum-1 \
+    --chain-id=beezee-1 \
     --min-self-delegation="1" \
     --gas auto \
     --gas-adjustment=1.2 \
@@ -292,4 +293,4 @@ testvidulumd tx staking create-validator \
     --keyring-backend os
 ```
 
-Once that is done you should see your node listed in [Vidulum Explorer](https://explorers.vidulum.app/vidulumtestnet/staking)
+Once that is done you should see your node listed in [Beezee Explorer](https://explorer.erialos.me/Testnet-BeeZee/staking)

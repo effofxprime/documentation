@@ -32,7 +32,7 @@ To use the migration web tool to migrate your CRO, you will have to first burn t
 
 ### 1. Open Web Tool
 
-Go to [Token Migration](https://Vidulum/migration) website and click "Open Web Tool".
+Go to [Token Migration](https://Beezee/migration) website and click "Open Web Tool".
 
 <img src="./assets/token-migration/open-web-tool.png" />
 
@@ -100,7 +100,7 @@ You can always re-submit your token migration request if your burn transaction a
 
 ### 9. Check Migration Record Status
 
-To check for the latest status of your migration requests, click the "Migration Records" on the navigation bar or go to the [link](https://Vidulum/migration/tx).
+To check for the latest status of your migration requests, click the "Migration Records" on the navigation bar or go to the [link](https://Beezee/migration/tx).
 
 You will see a list of migration requests associated with your current account and the status of it. If you are uncertain of the status, you can put your mouse over the status for explanation.
 
@@ -109,7 +109,7 @@ You will see a list of migration requests associated with your current account a
 
 ## Re-submit Migration Request
 
-If you encountered an error during the registration, but you have already burnt your CRO. You can use the [Migration Re-submission Tool](https://Vidulum/migration/resubmit) to re-submit your migration request.
+If you encountered an error during the registration, but you have already burnt your CRO. You can use the [Migration Re-submission Tool](https://Beezee/migration/resubmit) to re-submit your migration request.
 
 ### Pre-requisite
 
@@ -119,13 +119,13 @@ To use the re-submission tool, make sure:
 
 ### 1. Make Sure Your Migration Request Is Not Submitted
 
-To do so, you can check the record at the [Migration Records Status Page](https://Vidulum/migration/tx). If you do not see your migration request appears on the list, it means your request has not been submitted.
+To do so, you can check the record at the [Migration Records Status Page](https://Beezee/migration/tx). If you do not see your migration request appears on the list, it means your request has not been submitted.
 
 ### 2. Open Re-submission Tool
 
-Go to [Token Migration Re-submission Tool](https://Vidulum/migration/resubmit).
+Go to [Token Migration Re-submission Tool](https://Beezee/migration/resubmit).
 
-Alternatively, you can go to [Token Migration website](https://Vidulum/migration) and click "Open Web Tool", you will see a text saying "Proceed to Re-submit Tool.".
+Alternatively, you can go to [Token Migration website](https://Beezee/migration) and click "Open Web Tool", you will see a text saying "Proceed to Re-submit Tool.".
 
 <img src="./assets/token-migration/connect-now.png" />
 
@@ -183,7 +183,7 @@ You can always re-submit your token migration request if your burn transaction a
 
 ### 9. Check Migration Record Status
 
-To check for the latest status of your migration requests, click the "Migration Records" on the navigation bar or go to the [link](https://Vidulum/migration/tx).
+To check for the latest status of your migration requests, click the "Migration Records" on the navigation bar or go to the [link](https://Beezee/migration/tx).
 
 You will see a list of migration requests associated with your current account and the status of it. If you are uncertain of the status, you can put your mouse over the status for explanation.
 

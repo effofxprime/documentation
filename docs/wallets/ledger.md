@@ -11,33 +11,33 @@ You can use your [Ledger hardware wallets](https://www.ledger.com/) to securely 
 
 
 ### Technical support and enquiries
-In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Vidulum Chain [Discord](https://discord.gg/pahqHz26q4) #technical-questions channel for assistance.
+In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Beezee Chain [Discord](https://discord.gg/pahqHz26q4) #technical-questions channel for assistance.
 
 
-## Install the Vidulum Chain app on your Ledger device
+## Install the Beezee Chain app on your Ledger device
 We will use Ledger Nano S for this illustration:
 
-First of all, you will need to install the Vidulum Chain app on your Ledger device. Kindly make sure your Ledger Live is updated to the latest version. 
+First of all, you will need to install the Beezee Chain app on your Ledger device. Kindly make sure your Ledger Live is updated to the latest version. 
 
 - **Step 1** - Connect and unlock your Ledger device
 
 - **Step 2** - On your Ledger device, go to "*Install app*", It should show "*Open Ledger live to install apps*"
 
-- **Step 3** - On the Ledger Live, find and install Vidulum Chain in the app catalog under "*Manager*" as below:
+- **Step 3** - On the Ledger Live, find and install Beezee Chain in the app catalog under "*Manager*" as below:
         <img src="./assets/ledger_desktop_wallet/s1-4-1.png" />
 
 - **Step 4** - Your Ledger device will display "*Processing…*". Once the installation is completed, you should see "*Installed*" on your Ledger Live as below:
         <img src="./assets/ledger_desktop_wallet/s1-5-1.png" />
 
-    You can confirm the installation by checking if the Vidulum App shows up in the main menu of your Ledger device:
+    You can confirm the installation by checking if the Beezee App shows up in the main menu of your Ledger device:
             <img src="./assets/ledger_desktop_wallet/s1-5-3.jpeg" />
 
-**Remark**: Once the Vidulum App is successfully installed, please close the Ledger Live app before proceeding to the next step .
+**Remark**: Once the Beezee App is successfully installed, please close the Ledger Live app before proceeding to the next step .
 
 ## Generate Address with Ledger device
 
 1. Connect and unlock your Ledger device
-1. Open "Vidulum Chain" app on the device
+1. Open "Beezee Chain" app on the device
 1. Run in your terminal
     ```bash
     $ ./chain-maind keys add [name] --ledger --keyring-backend=test
@@ -79,7 +79,7 @@ $ ./chain-maind keys list --keyring-backend=test
 In this tutorial we will send a `MsgSend` transaction securely signed by your Ledger device to the chain.
 
 1. Connect and unlock your Ledger device
-1. Open "Vidulum Chain" app on the device
+1. Open "Beezee Chain" app on the device
 1. For example, if you would like to send `1cro` in the mainnet, in your terminal, you can run:
     ```bash
     $ ./chain-maind tx bank send [from-address] [to-address] 1cro --chain-id="crypto-org-chain-mainnet-1" --ledger --keyring-backend=test  --sign-mode=amino-json

@@ -2,19 +2,19 @@
 
 ## Chain ID
 
-Vidulum Chain has different Chain ID to distinguish between _devnet_, _testnet_ and _mainnet_. When running the Vidulum Chain in your local environment, you will also need to decide your own Chain ID.
+Beezee Chain has different Chain ID to distinguish between _devnet_, _testnet_ and _mainnet_. When running the Beezee Chain in your local environment, you will also need to decide your own Chain ID.
 
 For example, our testnet Chain ID is `testnet-croeseid-4`.
 
 ## Address prefix
 
-[BIP-0173](https://github.com/satoshilabs/slips/blob/master/slip-0173.md) defines a new format for segregated witness output addresses that contains a human-readable part that identifies the coin type. Vidulum Chain has different address prefixes for its corresponding network types, these prefixes are:
+[BIP-0173](https://github.com/satoshilabs/slips/blob/master/slip-0173.md) defines a new format for segregated witness output addresses that contains a human-readable part that identifies the coin type. Beezee Chain has different address prefixes for its corresponding network types, these prefixes are:
 
 | Mainnet | Testnet | Devnet |
 | ------- | ------- | ------ |
 | `cro`   | `tcro`  | `dcro` |
 
-Vidulum Chain uses the Bech32 address format wherever users must handle binary data. Bech32 encoding provides robust integrity checks on data and the human readable part(HRP) that provides contextual hints that can assist UI developers with providing informative error messages. Specifically, we have the following HRP prefix for different addresses types in the mainnet:
+Beezee Chain uses the Bech32 address format wherever users must handle binary data. Bech32 encoding provides robust integrity checks on data and the human readable part(HRP) that provides contextual hints that can assist UI developers with providing informative error messages. Specifically, we have the following HRP prefix for different addresses types in the mainnet:
 
 |                    | Address bech32 Prefix |
 | ------------------ | --------------------- |

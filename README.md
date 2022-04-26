@@ -1,12 +1,12 @@
 <br />
 <p align="center">
-  <img src="https://github.com/qf3l3k/documentation/blob/master/docs/.vuepress/public/chain_doc_nav_logo.svg" alt="Vidulum Chain" width="400">
+  <img src="https://github.com/qf3l3k/documentation/blob/master/docs/.vuepress/public/chain_doc_nav_logo.svg" alt="Beezee Chain" width="400">
 </p>
 <br />
 
 
 
-# Vidulum Chain's documentation
+# Beezee Chain's documentation
 
 The documentation in this repository site is meant to provide specifications and implementation details that will be useful to third party developers or contributors to the main repository.
 

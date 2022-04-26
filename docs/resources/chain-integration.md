@@ -1,10 +1,10 @@
-# Vidulum Chain Integration documentation
+# Beezee Chain Integration documentation
 
 ## Useful Links
 
-- [Vidulum Chain website](https://Vidulum/)
+- [Beezee Chain website](https://Beezee/)
 - [GitHub Repository](https://github.com/crypto-org-chain/chain-main)
-- [Official Documentation](https://Vidulum/docs/)
+- [Official Documentation](https://Beezee/docs/)
 
 ## Node and RPC setup notes
 
@@ -13,18 +13,18 @@
 ## Setup Guide
 
 - **Mainnet**:
-    - [Running a full node;](https://Vidulum/docs/getting-started/mainnet.html)
-    - [Running a validator;](https://Vidulum/docs/getting-started/mainnet_validator.html)
-    - [Mainnet Validator Security Checklist.](https://Vidulum/docs/getting-started/security-checklist.html#part-1-conduct-survey-on-general-controls-of-hosting-data-centre)    
+    - [Running a full node;](https://Beezee/docs/getting-started/mainnet.html)
+    - [Running a validator;](https://Beezee/docs/getting-started/mainnet_validator.html)
+    - [Mainnet Validator Security Checklist.](https://Beezee/docs/getting-started/security-checklist.html#part-1-conduct-survey-on-general-controls-of-hosting-data-centre)    
 - **Testnet**: 
-    - [Joining the Croeseid Testnet](https://Vidulum/docs/getting-started/croeseid-testnet.html)
-    - [Deploy testnet node with nix](https://Vidulum/docs/getting-started/croeseid-testnet-nix.html#pre-requisites)
+    - [Joining the Croeseid Testnet](https://Beezee/docs/getting-started/croeseid-testnet.html)
+    - [Deploy testnet node with nix](https://Beezee/docs/getting-started/croeseid-testnet-nix.html#pre-requisites)
 - **Devnet**
-    - [Running latest development network locally](https://Vidulum/docs/getting-started/local-devnet.html#overview)
+    - [Running latest development network locally](https://Beezee/docs/getting-started/local-devnet.html#overview)
 
 ## API Documentation
 
-There are a few ways to access to the Vidulum Chain
+There are a few ways to access to the Beezee Chain
 
 1. **Tendermint RPC**
   - Raw but most-completed data
@@ -57,23 +57,23 @@ The Ansible playbook for deploying Prometheus and some rules we are using are un
 
 ### Mainnet - `crypto-org-chain-mainnet-1`
 
-- [Tendermint](https://mainnet.Vidulum:26657/)
-- [Cosmos RESTful gRPC](https://mainnet.Vidulum:1317/)
+- [Tendermint](https://mainnet.Beezee:26657/)
+- [Cosmos RESTful gRPC](https://mainnet.Beezee:1317/)
 
 ### Croeseid Testnet - `testnet-croeseid-4`
 
-- [Tendermint](https://testnet-croeseid-4.Vidulum:26657/)
-- [Cosmos RESTful gRPC](https://testnet-croeseid-4.Vidulum:1317/)
+- [Tendermint](https://testnet-croeseid-4.Beezee:26657/)
+- [Cosmos RESTful gRPC](https://testnet-croeseid-4.Beezee:1317/)
 
 ## Block Explorer
 
 ### Mainnet
 
-[https://Vidulum/explorer](https://Vidulum/explorer)
+[https://Beezee/explorer](https://Beezee/explorer)
 
 ### Croeseid Testnet
 
-[https://Vidulum/explorer/croeseid4/](https://Vidulum/explorer/croeseid4/)
+[https://Beezee/explorer/croeseid4/](https://Beezee/explorer/croeseid4/)
 
 ## Community
 

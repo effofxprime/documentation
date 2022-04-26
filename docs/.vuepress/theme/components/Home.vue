@@ -9,7 +9,7 @@
         />
         <p class="description">Welcome to</p>
         <h1 v-if="data.heroText !== null" id="main-title">
-          Vidulum Chain Documentation
+          Beezee Chain Documentation
         </h1>
         <p class="action" v-if="data.actionText && data.actionLink">
           <NavLink class="action-button" :item="actionLink" />
@@ -33,7 +33,7 @@
             </div>
             <div>
               <h3>Developers</h3>
-              <p>Check how to become part of Vidulum chain and project</p>
+              <p>Check how to become part of Beezee chain and project</p>
               <a href="/docs/getting-started">
                 Get involved
                 <img
@@ -50,8 +50,8 @@
             </div>
             <div>
               <h3>Partners</h3>
-              <p>Become part of Vidulum future and join project as Partner</p>
-              <a href="https://vidulum.app/contact.html" target="_blank">
+              <p>Become part of Beezee future and join project as Partner</p>
+              <a href="https://getbze.com/contact.html" target="_blank">
                 Join us
                 <img
                   class="action-arrow"
@@ -71,7 +71,7 @@
                 Connect with our team, community and stay up-to-date with
                 project development updates
               </p>
-              <a href="https://vidulum.app/about.html" target="_blank">
+              <a href="https://getbze.com/about.html" target="_blank">
                 Connect
                 <img
                   class="action-arrow"

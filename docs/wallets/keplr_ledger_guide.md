@@ -5,7 +5,7 @@ As an alternative way, you can consider using Keplr to conduct staking and rewar
 In the following step-by-step guide, you will learn how to stake your CROs using the Keplr chrome extension and web wallet together with your Ledger device. You may choose to use Ledger Nano S or Nano X. In this tutorial, Ledger Nano S is used for demonstration.
 
 ### Technical support and inquiries
-In case you have any inquiries about using the Ledger device with Keplr, kindly refer to the [Keplr FAQ list](https://faq.keplr.app/) or send a message to the Vidulum Chain [Discord Channel](https://discord.com/invite/pahqHz26q4) *#browser-extension-wallet* channel for assistance. Using Keplr with a Ledger Nano on Windows sometimes causes some issues, if you encounter such issues, please reach out to the Keplr team.
+In case you have any inquiries about using the Ledger device with Keplr, kindly refer to the [Keplr FAQ list](https://faq.keplr.app/) or send a message to the Beezee Chain [Discord Channel](https://discord.com/invite/pahqHz26q4) *#browser-extension-wallet* channel for assistance. Using Keplr with a Ledger Nano on Windows sometimes causes some issues, if you encounter such issues, please reach out to the Keplr team.
 
 ## Set up Keplr Wallet and connect with your Ledger device
 *The browser may ask for permission to access your Ledger device, please make sure to grant this permission in your browser during this process. Note that the permission is strictly used to allow Keplr extension to communicate with the front-ends, and all sensitive data remain locally on your device.*
@@ -23,7 +23,7 @@ In this tutorial, we can skip the advanced option.
 
 <img src="./assets/keplr_wallet/s1-2.png" />
 
-It is time to connect your Ledger device to Keplr now! After plugging in your Ledger Device, you can open the Vidulum Chain App on it and click “Next” in the pop-up window. 
+It is time to connect your Ledger device to Keplr now! After plugging in your Ledger Device, you can open the Beezee Chain App on it and click “Next” in the pop-up window. 
 
 <img src="./assets/keplr_wallet/s1-3.png" />
 
@@ -32,11 +32,11 @@ Upon this step, your Ledger device should be successfully connected to Keplr!
 <img src="./assets/keplr_wallet/s1-4.png" />
 
 
-### Step 2: Connect to Vidulum Chain on Keplr
+### Step 2: Connect to Beezee Chain on Keplr
 
-At this step, we are going to connect to the Vidulum Chain on Keplr.
+At this step, we are going to connect to the Beezee Chain on Keplr.
 
-Now you can open the Keplr extension and make the network change on the top bar, and you will find Vidulum in the drop-down list. After the network is set, you should be able to view your account name, address, and CRO balance info. 
+Now you can open the Keplr extension and make the network change on the top bar, and you will find Beezee in the drop-down list. After the network is set, you should be able to view your account name, address, and CRO balance info. 
 
 Copy your account address which is below your account name and send some CROs to this address, so you can get ready to stake with Keplr! 
 
@@ -44,7 +44,7 @@ Copy your account address which is below your account name and send some CROs to
 <img src="./assets/keplr_wallet/s2-2.png" />
 <img src="./assets/keplr_wallet/s2-3.png" />
 
-### Step 3: Stake CROs on the Vidulum Chain via Keplr 
+### Step 3: Stake CROs on the Beezee Chain via Keplr 
 
 *Please note: you can always choose to redelegate or undelegate, while in case you are undelegating, your tokens will remain locked for 28 days (due to a security mechanism stipulated by the Cosmos protocol).*
 
@@ -76,7 +76,7 @@ By now, you have successfully completed your stake!
 It is ideal that you claim the staking rewards regularly in that you can either redelegate these rewards for a compound effect or do something else with it. 
 
 To claim your CRO staking rewards, open the Keplr Browser Extension and click “Claim”. In this demo, we will go with “Average”. 
-Now you can plug in your Ledger and open the Vidulum Chain app on it, then click “Next” in the Browser Extension pop-up. The details will show and it will say “Waiting for Leder to Confirm'' at the bottom.
+Now you can plug in your Ledger and open the Beezee Chain app on it, then click “Next” in the Browser Extension pop-up. The details will show and it will say “Waiting for Leder to Confirm'' at the bottom.
 
 <img src="./assets/keplr_wallet/s4-1.png" />
 <img src="./assets/keplr_wallet/s4-2.png" />

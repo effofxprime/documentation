@@ -1,29 +1,29 @@
 # Using Ledger device with desktop wallet
 
-### Vidulum Chain Desktop Wallet 
-Vidulum Chain Desktop Wallet Beta supports operations ranging from sending multiple assets, staking, governance & NFT. latest version can be found on the [release page](https://github.com/crypto-com/chain-desktop-wallet/releases). 
+### Beezee Chain Desktop Wallet 
+Beezee Chain Desktop Wallet Beta supports operations ranging from sending multiple assets, staking, governance & NFT. latest version can be found on the [release page](https://github.com/crypto-com/chain-desktop-wallet/releases). 
 
 
-The following are the step-by-step instructions for the use of Ledger devices with Vidulum Chain desktop wallet. Before starting the process, you will need:
+The following are the step-by-step instructions for the use of Ledger devices with Beezee Chain desktop wallet. Before starting the process, you will need:
  
 - An initialized Ledger device (Nano S / Nano X) with latest firmware;
 - Latest version of [Ledger Live](https://www.ledger.com/ledger-live);
-- [Vidulum Chain desktop wallet](https://github.com/crypto-com/chain-desktop-wallet/releases).
+- [Beezee Chain desktop wallet](https://github.com/crypto-com/chain-desktop-wallet/releases).
 
 
 ### Technical support and enquiries
-In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Vidulum Chain [Discord](https://discord.gg/pahqHz26q4) #desktop-wallet channel for assistance.
+In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Beezee Chain [Discord](https://discord.gg/pahqHz26q4) #desktop-wallet channel for assistance.
 
 
-## Install the Vidulum Chain desktop wallet app for Ledger and create the wallet  
+## Install the Beezee Chain desktop wallet app for Ledger and create the wallet  
 
-### Step 1 - Install the Vidulum Chain app on your Ledger device
+### Step 1 - Install the Beezee Chain app on your Ledger device
 
 - **Step 1.1** - Connect and unlock your Ledger device
 
 - **Step 1.2** - On your Ledger device, go to "*Install app*", It should show "*Open Ledger live to install apps*"
 
-- **Step 1.3** - On the Ledger Live, find Vidulum Chain & Ethereum to install in the app catalog under "*Manager*" as below:
+- **Step 1.3** - On the Ledger Live, find Beezee Chain & Ethereum to install in the app catalog under "*Manager*" as below:
         <img src="./assets/ledger_desktop_wallet/s1-4-1.png" />
         <img src="./assets/ledger_desktop_wallet/s1-4-2.png" />
 
@@ -31,18 +31,18 @@ In case you have any enquiry about using Ledger device with desktop wallet, kind
         <img src="./assets/ledger_desktop_wallet/s1-5-1.png" />
         <img src="./assets/ledger_desktop_wallet/s1-5-2.png" />
 
-    You can confirm the installation by checking if the Vidulum App shows up in the main menu of your Ledger device:
+    You can confirm the installation by checking if the Beezee App shows up in the main menu of your Ledger device:
             <img src="./assets/ledger_desktop_wallet/s1-5-3.jpeg" />
 
-**Remark**: Once Vidulum App & Ethereum successfully installed, please remember to close the *Ledger Live* app before proceeding to the next step .
+**Remark**: Once Beezee App & Ethereum successfully installed, please remember to close the *Ledger Live* app before proceeding to the next step .
 
 ### Step 2 - Create wallet in Desktop Wallet with Ledger device
 
 After the app is set, please conducting the following steps to create a wallet with the desktop wallet: 
 
-- **Step 2.1** - Download the latest Vidulum Chain desktop wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases)
+- **Step 2.1** - Download the latest Beezee Chain desktop wallet [here](https://github.com/crypto-com/chain-desktop-wallet/releases)
 
-- **Step 2.2** - Run the Vidulum Chain desktop wallet and click "*Get started*":
+- **Step 2.2** - Run the Beezee Chain desktop wallet and click "*Get started*":
         <img src="./assets/desktop_wallet/0-2.png" />
 
 - **Step 2.3** - Before creating your wallet, you would need to create an App password to protect your desktop wallet:
@@ -53,20 +53,20 @@ After the app is set, please conducting the following steps to create a wallet w
     - Input your wallet name of your choice;
     - Tick "*Want to create with hardware wallet*" and choose "*Ledger*" as the wallet type. 
     - "**Address Index**" is the last value of the Derivation Path (e.g. `44'/394'/0'/0/{address_index}`), which used to derive different addresses from the same key based on different number input. You will need to input the same "**Address Index**" if you want to restore the Ledger wallet address on another device.
-For the network, three options of "**Testnet Croeseid 4**", "**Mainnet**", and "**Custom Devnet**" are given. **Testnet Croeseid 4** is Croeseid testnet which is our Cosmos-based testnet that has been running since October 2020. **Mainnet** refers to Vidulum Chain mainnet. Other than these, you can also fill up the custom configuration to your own network.
+For the network, three options of "**Testnet Croeseid 4**", "**Mainnet**", and "**Custom Devnet**" are given. **Testnet Croeseid 4** is Croeseid testnet which is our Cosmos-based testnet that has been running since October 2020. **Mainnet** refers to Beezee Chain mainnet. Other than these, you can also fill up the custom configuration to your own network.
         <img src="./assets/ledger_desktop_wallet/s2-4.png" />
     In this demonstration, we will be creating a testnet address and connecting to the current Croeseid Testnet, therefore, we select "**Testnet Croeseid 4**" as the network option. 
 
-- **Step 2.5** - After click "*Create Wallet*", and you will be asked to open Vidulum Chain App on your Ledger device. 
+- **Step 2.5** - After click "*Create Wallet*", and you will be asked to open Beezee Chain App on your Ledger device. 
         <img src="./assets/ledger_desktop_wallet/s2-5-1.png" />    
-Before you click "Connect", make sure you are able to see "*Vidulum Chain ready*" displayed on your device as follow: 
+Before you click "Connect", make sure you are able to see "*Beezee Chain ready*" displayed on your device as follow: 
         <img src="./assets/ledger_desktop_wallet/s2-5-2.jpg" />    
     
 - **Step 2.6** - You will be asked to open Ethereum App on your Ledger device in order to create a Cronos Chain wallet. 
         <img src="./assets/ledger_desktop_wallet/s2-5-3.png" />    
         Make sure you are able to see "*Application is ready*" displayed on your device as follow: 
         <img src="./assets/ledger_desktop_wallet/s2-5-4.png" />    
-        Click "Connect". Both your Vidulum native chain & Cronos Chain wallet should be successfully created.
+        Click "Connect". Both your Beezee native chain & Cronos Chain wallet should be successfully created.
         <img src="./assets/ledger_desktop_wallet/s2-5-5.png" />    
 
 
@@ -77,18 +77,18 @@ Before starting with the sending transaction/performing staking operations, we w
 
 | App | Supported Assets |
 | :---: | --- | --- |
-| Vidulum  | CRO (Vidulum Chain) |
+| Beezee  | CRO (Beezee Chain) |
 | Ethereum  | CRO (Cronos Chain) |
 
 Verify the address by clicking "*Verify address on Ledger*", you should see the same address being displayed on your ledger device as well.
             <img src="./assets/ledger_desktop_wallet/s3-1.png" />
 
-- **Step 3.2** - Once the address has been confirmed, copy this address and request some funds from the [testnet faucet](https://Vidulum/faucet)
+- **Step 3.2** - Once the address has been confirmed, copy this address and request some funds from the [testnet faucet](https://Beezee/faucet)
 
 | Asset | Faucet |
 | :---: | --- | --- |
-| CRO (Vidulum Chain) | [https://Vidulum/faucet](https://Vidulum/faucet) |
-| CRO (Cronos Chain) | [https://cronos.Vidulum/faucet](https://cronos.Vidulum/faucet) |
+| CRO (Beezee Chain) | [https://Beezee/faucet](https://Beezee/faucet) |
+| CRO (Cronos Chain) | [https://cronos.Beezee/faucet](https://cronos.Beezee/faucet) |
 
 - **Step 3.3** - Your current balance will be available on the "Assets" page. If you would like to view the transaction details, go to the "Transaction" Tab and simply hit the hash link under Transaction Hash, and it will direct you to the corresponding explorer where different details related to transactions will be displayed:
             <img src="./assets/ledger_desktop_wallet/s3-3.png" />

@@ -1,18 +1,18 @@
-# Vidulum Chain Desktop Wallet 
+# Beezee Chain Desktop Wallet 
 
-Vidulum Chain Desktop Wallet (Beta) supports staking operations, validator selections, and governance voting. Users can also view, send and mint NFTs directly, and much more from the Desktop Wallet. The latest version can be found on the [Desktop Wallet page](https://Vidulum/desktopwallet), and the previous releases are also available on the [release page](https://github.com/crypto-com/chain-desktop-wallet/releases).
+Beezee Chain Desktop Wallet (Beta) supports staking operations, validator selections, and governance voting. Users can also view, send and mint NFTs directly, and much more from the Desktop Wallet. The latest version can be found on the [Desktop Wallet page](https://Beezee/desktopwallet), and the previous releases are also available on the [release page](https://github.com/crypto-com/chain-desktop-wallet/releases).
 
 ### Geo-Restrictions
 
-Information about [restricted locations](https://Vidulum/desktopwallet/geo-restrictions) from downloading [Vidulum](https://Vidulum/) Chain Desktop Wallet.
+Information about [restricted locations](https://Beezee/desktopwallet/geo-restrictions) from downloading [Beezee](https://Beezee/) Chain Desktop Wallet.
 
 ### Technical support and enquiries
-Hope this guide gives you a better understanding of the use of Vidulum Chain Desktop Wallet! 
+Hope this guide gives you a better understanding of the use of Beezee Chain Desktop Wallet! 
 
-In case you have any enquiries about using the Desktop Wallet, kindly send a message to the Vidulum Chain [Discord](https://discord.gg/pahqHz26q4) #desktop-wallet channel or [chain@Vidulum](mailto:chain@Vidulum) for assistance.
+In case you have any enquiries about using the Desktop Wallet, kindly send a message to the Beezee Chain [Discord](https://discord.gg/pahqHz26q4) #desktop-wallet channel or [chain@Beezee](mailto:chain@Beezee) for assistance.
 
 ## Using Desktop Wallet for the first time
-- **Step 1** - [Download](https://Vidulum/desktopwallet) the latest Vidulum Chain Desktop Wallet.
+- **Step 1** - [Download](https://Beezee/desktopwallet) the latest Beezee Chain Desktop Wallet.
 - **Step 2** - Run the Desktop Wallet you just installed and and click "*Get Started*". 
         <img src="./assets/desktop_wallet/0-2.png" />
 - **Step 3** - Before creating or restoring your wallet, you would need to create an App password to protect your desktop wallet. The password is required to be at least 8 characters, containing a letter, a number, and a special character.
@@ -30,7 +30,7 @@ This is where you could manage all your wallets, including Create, Restore, Dele
     - Input the wallet name of your choice.
     - For the network, three options of "*TESNET Croeseid 4*", "*MAINNET*", and "*CUSTOM DEVNET*" are given: 
         - "*TESNET Croeseid 4*" is our Cosmos-based `testnet-croeseid-4`.
-        - "*MAINNET*" is referring to Vidulum Chain mainnet. 
+        - "*MAINNET*" is referring to Beezee Chain mainnet. 
         - Other than these, you may fill up the custom configuration to your own network. 
     - In this demonstration, we will be creating a testnet address and connecting to the current `testnet-croeseid-4`, therefore, we select "*TESNET Croeseid 4*" as the network option.
                 <img src="./assets/desktop_wallet/1-1-1.png" />
@@ -78,8 +78,8 @@ Do not forget that you can always request some testing tokens in faucet:
 
 | Asset | Faucet |
 | :---: | --- | --- |
-| TCRO (Croeseid Testnet) | [https://Vidulum/faucet](https://Vidulum/faucet) |
-| TCRO (Cronos Testnet) | [https://cronos.Vidulum/faucet](https://cronos.Vidulum/faucet) |
+| TCRO (Croeseid Testnet) | [https://Beezee/faucet](https://Beezee/faucet) |
+| TCRO (Cronos Testnet) | [https://cronos.Beezee/faucet](https://cronos.Beezee/faucet) |
 
 In case you have reached the daily limit on faucet airdrop, you can simply send a message on [Discord #request-tcro channel](https://discord.gg/c7vSX4TSrf).
 
@@ -111,7 +111,7 @@ If someone is sending funds to you or you are sending funds from your other addr
 
 
 ## 3. Staking Operations
-Vidulum Chain is based on Tendermint Core's consensus engine, it relies on a set of validators to participate in the proof of stake (PoS) consensus protocol who are responsible for committing new blocks in the blockchain. Token holders might stake their tokens to validators to secure the network and earn rewards. Particularly, we can:
+Beezee Chain is based on Tendermint Core's consensus engine, it relies on a set of validators to participate in the proof of stake (PoS) consensus protocol who are responsible for committing new blocks in the blockchain. Token holders might stake their tokens to validators to secure the network and earn rewards. Particularly, we can:
 - Delegate to a validator;
 - Withdraw staking rewards from a validator;
 - Redelegate from a validator.
@@ -185,14 +185,14 @@ Governance proposals potentially impact many stakeholders. You are able to view 
         <img src="./assets/desktop_wallet/4-2.png" />
 
 ## 5. NFT Support
-The "*My NFT*" page is where you could manage your NFTs which exist on the Vidulum Chain, no matter browsing around your NFTs collections, transfer any NFTs to your friend, or even mint your very own unique NFT. 
+The "*My NFT*" page is where you could manage your NFTs which exist on the Beezee Chain, no matter browsing around your NFTs collections, transfer any NFTs to your friend, or even mint your very own unique NFT. 
         <img src="./assets/desktop_wallet/5.png" />
 
 ### 5.1 - Transfer an NFT
 - **Step 1** - Under "*NFT Collection*", select the NFT you would like to transfer. Click "*Transfer NFT*":
         <img src="./assets/desktop_wallet/5-1-1.png" />
 
-- **Step 2** - Enter the Recipient Address. Please make sure that the recipient address is compatible with the Vidulum Chain NFT token standard. Click "*Continue*":
+- **Step 2** - Enter the Recipient Address. Please make sure that the recipient address is compatible with the Beezee Chain NFT token standard. Click "*Continue*":
         <img src="./assets/desktop_wallet/5-1-2.png" />
 
 - **Step 3** - Review the NFT transaction details in the confirmation window, then click "*Confirm Transfer*": 
@@ -211,7 +211,7 @@ The "*My NFT*" page is where you could manage your NFTs which exist on the Vidul
         <img src="./assets/desktop_wallet/5-2-4-1.png" />
 
 ## 6. Cronos Bridge
-Our Cronos Mainnet Beta, an EVM Compatible chain built with Etheremint, is live on 8th November 2021. You could easily convert and transfer your Vidulum Native CRO and Cronos CRO between each other seamlessly with the Cronos Bridge we provide. 
+Our Cronos Mainnet Beta, an EVM Compatible chain built with Etheremint, is live on 8th November 2021. You could easily convert and transfer your Beezee Native CRO and Cronos CRO between each other seamlessly with the Cronos Bridge we provide. 
         <img src="./assets/desktop_wallet/6.png" />
 
 ### 6.1 - Before the bridge transfer
@@ -220,34 +220,34 @@ First, you need to decide your desired bridge direction. You can also customize 
 
 Here are the default settings of certain bridge directions:
 
-**MAINNET BETA** - *Vidulum Chain* to *Cronos Chain*
+**MAINNET BETA** - *Beezee Chain* to *Cronos Chain*
 | Field | Value |
 | :---: | --- | --- |
 | Prefix | crc |
 | Bridge Channel | channel-44 |
 | Bridge Port | transfer |
-| Bridge Indexing URL | https://cronos.Vidulum/indexing/api/v1/bridges |
+| Bridge Indexing URL | https://cronos.Beezee/indexing/api/v1/bridges |
 
-**MAINNET BETA** - *Cronos Chain* to *Vidulum Chain*
+**MAINNET BETA** - *Cronos Chain* to *Beezee Chain*
 | Field | Value |
 | :---: | --- | --- |
-| Cronos Bridge Contract Address | [0x6b1b50c2223eb31E0d4683b046ea9C6CB0D0ea4F](https://cronos.Vidulum/explorer/address/0x6b1b50c2223eb31E0d4683b046ea9C6CB0D0ea4F/transactions) |
-| Bridge Indexing URL | https://cronos.Vidulum/indexing/api/v1/bridges |
+| Cronos Bridge Contract Address | [0x6b1b50c2223eb31E0d4683b046ea9C6CB0D0ea4F](https://cronos.Beezee/explorer/address/0x6b1b50c2223eb31E0d4683b046ea9C6CB0D0ea4F/transactions) |
+| Bridge Indexing URL | https://cronos.Beezee/indexing/api/v1/bridges |
 | Gas Limit | 30000 |
 
-**TESTNET** - *Vidulum Chain* to *Cronos Chain*
+**TESTNET** - *Beezee Chain* to *Cronos Chain*
 | Field | Value |
 | :---: | --- | --- |
 | Prefix | tcrc |
 | Bridge Channel | channel-131 |
 | Bridge Port | transfer |
-| Bridge Indexing URL | https://cronos.Vidulum/testnet3/indexing/api/v1/bridges |
+| Bridge Indexing URL | https://cronos.Beezee/testnet3/indexing/api/v1/bridges |
 
-**TESTNET** - *Cronos Chain* to *Vidulum Chain*
+**TESTNET** - *Cronos Chain* to *Beezee Chain*
 | Field | Value |
 | :---: | --- | --- |
-| Cronos Bridge Contract Address | [0x44b8c54d95906D6b223dAE5E038cB8EF4ef45aE5](https://cronos.Vidulum/explorer/testnet3/address/0x44b8c54d95906D6b223dAE5E038cB8EF4ef45aE5/transactions) |
-| Bridge Indexing URL | https://cronos.Vidulum/testnet3/indexing/api/v1/bridges |
+| Cronos Bridge Contract Address | [0x44b8c54d95906D6b223dAE5E038cB8EF4ef45aE5](https://cronos.Beezee/explorer/testnet3/address/0x44b8c54d95906D6b223dAE5E038cB8EF4ef45aE5/transactions) |
+| Bridge Indexing URL | https://cronos.Beezee/testnet3/indexing/api/v1/bridges |
 | Gas Limit | 30000 |
 
 NOTE: A misconfiguration may lead to a bridge transfer failure.
@@ -280,8 +280,8 @@ You are able to change the node connection settings for every different wallet s
 
 | Network | Mainnet | Testnet Croeseid 4 |
 | :---: | --- | --- |
-| Node URL  | https://mainnet.Vidulum | https://testnet-croeseid-4.Vidulum |
-| Chain Indexing URL  | https://Vidulum/explorer/api/v1/ | https://Vidulum/explorer/croeseid4/api/v1/ |
+| Node URL  | https://mainnet.Beezee | https://testnet-croeseid-4.Beezee |
+| Chain Indexing URL  | https://Beezee/explorer/api/v1/ | https://Beezee/explorer/croeseid4/api/v1/ |
 | Chain ID  | crypto-org-chain-mainnet-1 | testnet-croeseid-4 |
 | Network Fee  | 10000 | 10000 |
 | Gas Limit  | 300000 | 300000 |

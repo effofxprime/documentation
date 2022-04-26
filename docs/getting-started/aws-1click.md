@@ -1,6 +1,6 @@
 # Mainnet/Testnet: Running Nodes using AWS 1-click Deployment
 
-This tutorial will use our AWS 1-click Deployment image to start and create the latest Vidulum Chain 1-Click Node for both Mainnet and Testnet
+This tutorial will use our AWS 1-click Deployment image to start and create the latest Beezee Chain 1-Click Node for both Mainnet and Testnet
 
 ::: warning CAUTION
 We do not recommend directly running validator on Mainnet by 1-Click deployment. Please use with caution!
@@ -19,9 +19,9 @@ Please read `AWS` free trial [page](https://aws.amazon.com/free/?all-free-tier.s
 Sign in to your AWS account and go to EC2 Dashboard and change to your favourite region. Click "Launch Instance"
 ![](./assets/aws_ec2_dashboard.png)
 
-### Step 2-1. Search for Vidulum Chain 1-Click Node on AWS Marketplace
-Search for "Vidulum Chain 1-Click Node" in **Choose an Amazon Machine Image (AMI)** section.
-Select "Vidulum Chain 1-Click Node" from search results.
+### Step 2-1. Search for Beezee Chain 1-Click Node on AWS Marketplace
+Search for "Beezee Chain 1-Click Node" in **Choose an Amazon Machine Image (AMI)** section.
+Select "Beezee Chain 1-Click Node" from search results.
 ![](./assets/aws_marketplace.png)
 
 ### Step 2-2. Choose an instance type
@@ -197,12 +197,12 @@ The latest block height can be found by:
 
 Mainnet
 ```bash
-$ curl -s https://mainnet.Vidulum:26657/block | jq -r .result.block.header.height
+$ curl -s https://mainnet.Beezee:26657/block | jq -r .result.block.header.height
 8525
 ```
 Testnet
 ```bash
-$ curl -s https://testnet-croeseid-4.Vidulum:26657/block | jq -r .result.block.header.height
+$ curl -s https://testnet-croeseid-4.Beezee:26657/block | jq -r .result.block.header.height
 8525
 ```
 
@@ -211,7 +211,7 @@ Once the tendermint syncs to the latest block, the setup is done! You may move o
 ## Step 4. Join as a validator
 
 We suggest that you should do this process locally with `chain-maind` to avoid exposing your keys on a cloud server.
-If you haven't installed `chain-maind` yet, please follow [Step 1. Get the Vidulum Chain binary](./croeseid-testnet.html#step-1-get-the-crypto-org-chain-binary) for testnet or [Step 1. Get the Vidulum Chain Mainnet binary](./mainnet.html#step-1-get-the-crypto-org-chain-mainnet-binary) for mainnet.
+If you haven't installed `chain-maind` yet, please follow [Step 1. Get the Beezee Chain binary](./croeseid-testnet.html#step-1-get-the-crypto-org-chain-binary) for testnet or [Step 1. Get the Beezee Chain Mainnet binary](./mainnet.html#step-1-get-the-crypto-org-chain-mainnet-binary) for mainnet.
 :::tip NOTE
 
 - Check whether your chain-maind is mainnet or testnet binary

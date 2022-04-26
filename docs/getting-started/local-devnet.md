@@ -3,11 +3,11 @@
 ::: warning caution
 this page is for building and running the latest development version of the chain for testing purpose only. The development branch is under active development and is highly unstable and subject to breaking changes. You should expect a moderate amount of troubleshooting work is required.
 
-For anyone interested in joining the Vidulum Chain testnet,
+For anyone interested in joining the Beezee Chain testnet,
 please refer to our [testnet documentation](./croeseid-testnet.md).
 :::
 
-By following this tutorial, you can compile and run the latest development version of Vidulum Chain from scratch. It is intended for testing purpose only.
+By following this tutorial, you can compile and run the latest development version of Beezee Chain from scratch. It is intended for testing purpose only.
 
 ## Overview
 
@@ -209,7 +209,7 @@ Congratulations! You've successfully transferred tokens to Bob.
 
 ### Staking Operation
 
-Vidulum Chain is based on tendermint with the Proof of Stake (PoS) consensus algorithm. In this sub-section, we will be covering how to perform basic staking related transactions.
+Beezee Chain is based on tendermint with the Proof of Stake (PoS) consensus algorithm. In this sub-section, we will be covering how to perform basic staking related transactions.
 
 #### Check the current validator set
 
